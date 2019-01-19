@@ -1,0 +1,46 @@
+.faq{
+    background-color: $color-grey-light-1;
+ 
+    width: 100%;
+    padding:5rem;
+    
+    &-main{
+        padding:15rem 0;
+        margin: 0 auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        @media only screen and (max-width: 1400px ){
+            width: 80%;
+        }
+        @media only screen and (max-width: 440px ){
+            width: 95%;
+        }
+        &__title{
+            font-weight: 300;
+            font-size:3.5rem;
+        }
+        &__subtitle{
+            font-weight: 300;
+          
+        }
+        &-body{
+            margin-top: 2.5rem;
+            display: flex;
+            flex-direction: column;
+         align-items:flex-start;  
+            &-question{
+                &__title{
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    font-size:1.8rem;
+                }
+                &__answer{
+                    font-size:1.8rem;
+                    font-weight:400;
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97638670-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-97638670-1');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexandros Panayi">
+    <title>
+        DFC - Contact Form
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a href="/"> <span class="navbar-brand__logo">DFC</span></a>
+                <span class="navbar-brand__title">Tax, Insurance, Immigration</span>
+            </div>
+            <div class="navbar-content">
+                <ul class="navbar-content-selection">
+                    <li class="navbar-content-selection__list">
+                        <a href="/about/index.html" class="navbar-content-selection__list__item  ">Our
+                            Team</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/services/index.html" class="navbar-content-selection__list__item">Services</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/contact/index.html" class="navbar-content-selection__list__item active-link">Contact</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/faq/index.html" class="navbar-content-selection__list__item">faq</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary ">
+                                Visit Us
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-mobile-show">
+                <i class="fas fa-bars navbar-mobile__icon" id="showNav" onclick="showNavigation()"></i>
+                <i class="fas fa-times navbar-mobile__icon" id="closeNav" onclick="closeNavigation()"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- MOBILE -->
+    <div class="navbar-mobile" id="toggleMobileNav" style="display:none;">
+        <div class="navbar-mobile-content">
+            <ul class="navbar-mobile-content-selection">
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/about/index.html" class="navbar-mobile-content-selection__list__item ">Our
+                        Team</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/services/index.html" class="navbar-mobile-content-selection__list__item">Services</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/contact/index.html" class="navbar-mobile-content-selection__list__item active-link">Contact</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/faq/index.html" class="navbar-mobile-content-selection__list__item">FAQ</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary ">
+                            Visit Us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section class="contact">
+            <div class="contact-main">
+                <div class="contact-main-header">
+                    <h1 class="heading--1 contact-main-header__title">Get started now</h1>
+                    <p class="contact-main-header__subtitle">Have a question, want to
+                        schedule an appointment, or just want to speak with us?
+                        We'll make sure to get back to you as soon as possible.
+                    </p>
+                    <p class="contact-main-header__info">
+                        <span>Tel: </span>(760) 347-5220
+                    </p>
+                    <p class="contact-main-header__info">
+                        <span>Email: </span>DFC@dfctaxcenter.com
+                    </p>
+                </div>
+                <div class="contact-main-form">
+                    <form method="POST" class="contact-main-form-control" id="contactForm">
+                        <label for="Name" class="contact-main-form-control--label">Full Name *</label>
+                        <div class="contact-main-form-control--field">
+                            <input type="text" name="Name" placeholder="Full Name" required class="contact-main-form-control--input"
+                                id="fullName" oninput="this.setCustomValidity('')">
+                            <span class="contact-main-form-control--icon">
+                                <i class="fas fa-times input-validator" id="invalid-input"></i>
+                                <i class="fas fa-ellipsis-v input-validator" id="neutral-input"></i>
+                                <i class="fas fa-check input-validator" id="valid-input"></i>
+                            </span>
+                        </div>
+                        <div class="contact-main-form-control--error">
+                            <span id="nameError"></span>
+                        </div>
+                        <label for="Email" class="contact-main-form-control--label">Email *</label>
+                        <div class="contact-main-form-control--field">
+                            <input type="email" name="Email" placeholder="Email Address" required class="contact-main-form-control--input"
+                                id="email">
+                            <span class="contact-main-form-control--icon">
+                                <i class="fas fa-times input-validator" id="invalid-input"></i>
+                                <i class="fas fa-ellipsis-v input-validator" id="neutral-input"></i>
+                                <i class="fas fa-check input-validator" id="valid-input"></i>
+                            </span>
+                        </div>
+                        <input type="text" name="fullname" style="display: none" id="fullname">
+                        <input type="text" name="emailaddress" style="display: none" id="emailaddress">
+                        <div class="contact-main-form-control--error">
+                            <span id="emailError"></span>
+                        </div>
+                        <label for="phone" class="contact-main-form-control--label">Direct line</label>
+                        <div class="contact-main-form-control--field">
+                            <input type="number" name="phone" placeholder="Phone Number" class="contact-main-form-control--input"
+                                id="phone">
+                            <span class="contact-main-form-control--icon">
+                                <i class="fas fa-times input-validator" id="invalid-input"></i>
+                                <i class="fas fa-ellipsis-v input-validator" id="neutral-input"></i>
+                                <i class="fas fa-check input-validator" id="valid-input"></i>
+                            </span>
+                        </div>
+                        <div class="contact-main-form-control--error">
+                            <span id="phoneError"></span>
+                        </div>
+                        <label for="Message" class="contact-main-form-control--label">Message *</label>
+                        <textarea name="Message" id="message" cols="50" rows="10" placeholder="Enter Your Message"
+                            required class="contact-main-form-control--text" id="message" maxlength="500" minlength="10"
+                            wrap="hard"></textarea>
+                        <button type="button" id="submitBtn" class="btn btn-primary contact-main-form-control--submit"
+                            value="Submit" onclick="validSubmit()">Submit</button>
+                        <div class="g-recaptcha" data-sitekey="6LfqPokUAAAAAKtxJavHl5ytQkooUCcnIc5Lp2f3" style="transform:scale(0.77);-webkit-transform:scale(0.87);transform-origin:0 0;-webkit-transform-origin:0 0;"
+                            data-callback="onCallBack" data-expired-callback="onExpired"></div>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <ul class="footer-top-nav">
+                <li class="footer-top-nav__list">
+                    <a href="/about/index.html" class="footer-top-nav__list__item">Our Team</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/services/index.html" class="footer-top-nav__list__item">Services</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/location/index.html" class="footer-top-nav__list__item">Locations</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/contact/index.html" class="footer-top-nav__list__item">Contact Us</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/faq/index.html" class="footer-top-nav__list__item">faq</a>
+                </li>
+            </ul>
+            <div class="footer-top-info">
+                <div class="footer-top-info-address">
+                    <p> <span>81711 Hwy 111, Suite 202 </span> <br>
+                        Indio, Ca<br>
+                        92201</p>
+                </div>
+            </div>
+            <div class="footer-top-info">
+                <div class="footer-top-info-email">
+                    <span>Email: </span> DFC@dfctaxcenter.com
+                </div>
+                <div class="footer-top-info-number">
+                    <span>Tel: </span> (760) 347-5220
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p class="footer-copyright__body">&copy; <span id="copyright"></span> Created By Alexandros
+                Panayi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/captcha.js" async></script>
+    <script type="text/javascript" src="../assets/js/contact.js" async></script>
+</body>
+
+
+</html>

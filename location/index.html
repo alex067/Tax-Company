@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97638670-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-97638670-1');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexandros Panayi">
+    <meta name="description" content="Located in Indio and Coachella. Start saving more in your taxes. Develop a solid retirement plan to enjoy your future.">
+    <title>
+        DFC - Tax &amp; financial advisement center located in Indio &amp; Coachella.
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Playfair+Display:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a href="/"> <span class="navbar-brand__logo">DFC</span></a>
+                <span class="navbar-brand__title">Tax, Insurance, Immigration</span>
+            </div>
+            <div class="navbar-content">
+                <ul class="navbar-content-selection">
+                    <li class="navbar-content-selection__list">
+                        <a href="/about/index.html" class="navbar-content-selection__list__item">Our Team</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/services/index.html" class="navbar-content-selection__list__item">Services</a>
+                    </li>
+                    <!-- <li class="navbar-content-selection__list">
+                        <a href="/latest-news/index.html" class="navbar-content-selection__list__item">Latest News</a>
+                      </li> -->
+                    <li class="navbar-content-selection__list">
+                        <a href="/contact/index.html" class="navbar-content-selection__list__item">Contact</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/faq/index.html" class="navbar-content-selection__list__item">faq</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary ">
+                                Visit Us
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-mobile-show">
+                <i class="fas fa-bars navbar-mobile__icon" id="showNav" onclick="showNavigation()"></i>
+                <i class="fas fa-times navbar-mobile__icon" id="closeNav" onclick="closeNavigation()"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar-mobile" id="toggleMobileNav" style="display:none;">
+        <div class="navbar-mobile-content">
+            <ul class="navbar-mobile-content-selection">
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/about/index.html" class="navbar-mobile-content-selection__list__item ">Our
+                        Team</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/services/index.html" class="navbar-mobile-content-selection__list__item ">Services</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/contact/index.html" class="navbar-mobile-content-selection__list__item">Contact</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/faq/index.html" class="navbar-mobile-content-selection__list__item">FAQ</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary active-link ">
+                            Visit Us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+
+        <section class="location">
+            <h1 class="heading--1 location__title">Our Locations</h1>
+            <p class="location__subtitle">Please visit any one of our locations for a walk-in appointment. Or give us a
+                call to schedule an
+                appointment.</p>
+            <div class="location-header">
+                <div class="location-header-office">
+                    <div class="location-header-office-thumbnail location-header-office-thumbnail--1 active--location"
+                        id="indioOffice">
+                        <!--<img src="/img/DFC office Indio.jpg" alt="Indio Office" class="location-header-office-thumbnail__img"
+                            id="indioOffice">-->
+                    </div>
+                    <h2 class="heading--2 location-header-office__title" id="indioDisplay">Indio</h2>
+                </div>
+                <div class="location-header-office">
+                    <div class="location-header-office-thumbnail location-header-office-thumbnail--2" id="coachellaOffice">
+                        <!--<img src="/img/DFC office Indio.jpg" alt="Indio Office" class="location-header-office-thumbnail__img"
+                                id="indioOffice">-->
+                    </div>
+                    <h2 class="heading--2 location-header-office__title" id="coachellaDisplay">Coachella</h2>
+                </div>
+            </div>
+            <div class="location-display location-display--indio" id="indioLocation">
+                <div class="location-display-container">
+                    <div class="location-display-main">
+                        <h2 class="location-display__title heading--2">Indio</h2>
+                        <div class="location-display-address">
+                            <p>81711 Highway 111
+                                Indo, CA, 92201
+                            </p>
+                            <p>
+                                Tel: (760) 347-5220
+                            </p>
+
+                        </div>
+                        <p class="location-display-schedule">Mon: 9:00am - 7:00pm <br>
+                            Tue: 9:00am - 7:00pm <br>
+                            Wed: 9:00am - 7:00pm <br>
+                            Thu: 9:00am - 7:00pm <br>
+                            Fri: 9:00am - 7:00pm <br>
+                            Sat: 9:00am - 5:00pm <br>
+                            Sun: CLOSED
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="location-display location-display--coachella" id="coachellaLocation">
+                <div class="location-display-container">
+                    <div class="location-display-main">
+                        <h2 class="location-display__title heading--2">Coachella</h2>
+                        <div class="location-display-address">
+                            <p>83097 Avenue 48 Suite D1B
+                                Coachella, CA, 92236
+                            </p>
+                            <p>
+                                Tel: (760) 347-0300
+                            </p>
+
+                        </div>
+                        <p class="location-display-schedule">Mon: 9:00am - 7:00pm <br>
+                            Tue: 9:00am - 7:00pm <br>
+                            Wed: 9:00am - 7:00pm <br>
+                            Thu: 9:00am - 7:00pm <br>
+                            Fri: 9:00am - 7:00pm <br>
+                            Sat: 9:00am - 3:00pm <br>
+                            Sun: CLOSED
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <ul class="footer-top-nav">
+                <li class="footer-top-nav__list">
+                    <a href="/about/index.html" class="footer-top-nav__list__item">Our Team</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/services/index.html" class="footer-top-nav__list__item">Services</a>
+                </li>
+                <!--<li class="footer-top-nav__list">
+                      <a href="" class="footer-top-nav__list__item">Latest News</a>
+                    </li>-->
+                <li class="footer-top-nav__list">
+                    <a href="/location/index.html" class="footer-top-nav__list__item">Locations</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/contact/index.html" class="footer-top-nav__list__item">Contact Us</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/faq/index.html" class="footer-top-nav__list__item">faq</a>
+                </li>
+            </ul>
+            <div class="footer-top-info">
+                <div class="footer-top-info-address">
+                    <p> <span>81711 Hwy 111, Suite 202 </span> <br>
+                        Indio, Ca<br>
+                        92201</p>
+                </div>
+            </div>
+            <div class="footer-top-info">
+                <div class="footer-top-info-email">
+                    <span>Email: </span> DFC@dfctaxcenter.com
+                </div>
+                <div class="footer-top-info-number">
+                    <span>Tel: </span> (760) 347-5220
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright__body">&copy; <span id="copyright"></span> Created By Alexandros
+                Panayi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/assets/js/index.js" async></script>
+</body>
+
+</html>

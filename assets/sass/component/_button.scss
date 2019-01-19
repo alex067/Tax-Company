@@ -1,0 +1,38 @@
+.btn {
+
+  
+  &-primary {
+    background-color:  rgba($color-btn-primary, 1);
+    border: .3rem solid $color-btn-primary;
+    color: $color-white;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing:1px;
+    &:hover {
+      background-color: $color-white;
+      border: .3rem solid $color-btn-primary;
+      color: $color-btn-primary;
+      cursor: pointer;
+    }
+    a, a:link, a:visited{
+      color: inherit;
+     text-transform: capitalize;
+     @include respond (tab-port){
+      font-size: 2rem;
+    }
+    }
+    &--2{
+      border: .3rem solid $color-primary;
+      background-color:  rgba($color-primary, 1);
+      margin-right: 2rem;
+      &:hover{
+        border: .3rem solid $color-primary;
+        color: $color-primary;
+      }
+    }
+  }
+
+}

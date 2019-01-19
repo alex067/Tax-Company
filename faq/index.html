@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97638670-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-97638670-1');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alexandros Panayi">
+    <title>
+        "DFC - Frequently Asked Questions
+    </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a href="/"> <span class="navbar-brand__logo">DFC</span></a>
+                <span class="navbar-brand__title">Tax, Insurance, Immigration</span>
+            </div>
+            <div class="navbar-content">
+                <ul class="navbar-content-selection">
+                    <li class="navbar-content-selection__list">
+                        <a href="/about/index.html" class="navbar-content-selection__list__item">Our Team</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/services/index.html" class="navbar-content-selection__list__item">Services</a>
+                    </li>
+                    <!-- <li class="navbar-content-selection__list">
+                        <a href="/latest-news/index.html" class="navbar-content-selection__list__item">Latest News</a>
+                      </li> -->
+                    <li class="navbar-content-selection__list">
+                        <a href="/contact/index.html" class="navbar-content-selection__list__item">Contact</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/faq/index.html" class="navbar-content-selection__list__item active-link">faq</a>
+                    </li>
+                    <li class="navbar-content-selection__list">
+                        <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary ">
+                                Visit Us
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-mobile-show">
+                <i class="fas fa-bars navbar-mobile__icon" id="showNav" onclick="showNavigation()"></i>
+                <i class="fas fa-times navbar-mobile__icon" id="closeNav" onclick="closeNavigation()"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- MOBILE -->
+    <div class="navbar-mobile" id="toggleMobileNav" style="display:none;">
+        <div class="navbar-mobile-content">
+            <ul class="navbar-mobile-content-selection">
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/about/index.html" class="navbar-mobile-content-selection__list__item ">Our
+                        Team</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/services/index.html" class="navbar-mobile-content-selection__list__item">Services</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/contact/index.html" class="navbar-mobile-content-selection__list__item">Contact</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/faq/index.html" class="navbar-mobile-content-selection__list__item active-link">FAQ</a>
+                </li>
+                <li class="navbar-mobile-content-selection__list">
+                    <a href="/location/index.html" class="btn__link "> <span class=" btn btn-primary ">
+                            Visit Us
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section class="faq">
+            <div class="faq-main">
+                <h1 class="heading--1 faq-main__title">FAQ</h1>
+                <h2 class="heading--2 faq-main__subtitle">Frequently Asked Questions</h2>
+                <div class="faq-main-body">
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">What is DFC?</h3>
+                        <p class="faq-main-body-question__answer">We are a family owned tax and financial
+                            advisement
+                            company based in the Coachella Valley.</p>
+                    </div>
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">What kind of services do you provide?</h3>
+                        <p class="faq-main-body-question__answer">We primarily provide tax services, such as tax
+                            preperations and deductions. However
+                            our team is also specialized and experienced in retirement planning, insurance,
+                            immigration, and estate management.
+                        </p>
+                    </div>
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">How long has DFC been in operation?</h3>
+                        <p class="faq-main-body-question__answer">We were founded in 1996, right here in the
+                            Coachella
+                            Valley.
+                            We have been providing our services for over <span id="decade" onload="generateDecade()"></span>
+                            years.
+                        </p>
+                    </div>
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">Do you take appointments?</h3>
+                        <p class="faq-main-body-question__answer">All appointments are made via walk-ins or by
+                            giving
+                            us a call.
+                            It is highly advisible to visit us in either of our offices.
+                        </p>
+                    </div>
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">Where are you located?
+                        </h3>
+                        <p class="faq-main-body-question__answer">We currently have offices located in Indio and
+                            Coachella.
+                            Please visit <a href="/location/index.html">Locations</a> to get more information about
+                            our
+                            office locations.
+                        </p>
+                    </div>
+                    <div class="faq-main-body-question">
+                        <h3 class="heading--3 faq-main-body-question__title">Have you always been family ran?
+                        </h3>
+                        <p class="faq-main-body-question__answer">Yes. Since 1996 we have been a family operated
+                            business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <ul class="footer-top-nav">
+                <li class="footer-top-nav__list">
+                    <a href="/about/index.html" class="footer-top-nav__list__item">Our Team</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/services/index.html" class="footer-top-nav__list__item">Services</a>
+                </li>
+                <!--<li class="footer-top-nav__list">
+                          <a href="" class="footer-top-nav__list__item">Latest News</a>
+                        </li>-->
+                <li class="footer-top-nav__list">
+                    <a href="/location/index.html" class="footer-top-nav__list__item">Locations</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/contact/index.html" class="footer-top-nav__list__item">Contact Us</a>
+                </li>
+                <li class="footer-top-nav__list">
+                    <a href="/faq/index.html" class="footer-top-nav__list__item">faq</a>
+                </li>
+            </ul>
+            <div class="footer-top-info">
+                <div class="footer-top-info-address">
+                    <p> <span>81711 Hwy 111, Suite 202 </span> <br>
+                        Indio, Ca<br>
+                        92201</p>
+                </div>
+            </div>
+            <div class="footer-top-info">
+                <div class="footer-top-info-email">
+                    <span>Email: </span> DFC@dfctaxcenter.com
+                </div>
+                <div class="footer-top-info-number">
+                    <span>Tel: </span> (760) 347-5220
+                </div>
+            </div>
+            <!--<div class="footer-top-media">
+
+        <div class="footer-top-media-social">
+          <div class="footer-top-media-social-container">
+            <a href="https://www.facebook.com/dfctaxcenter/?eid=ARB_TerctqRh8f73-T0Fd0JneMwSqwQFczZgL91Cl_Q_MmB8sFPo7Dibe3Gjk5ydWCQvvsmVxzEgVR76"
+              target="_blank">
+              <img src="img/facebook_black.png" class="footer-top-media-social-container__icon" alt="facebook logo">
+          </div>
+          <div class="footer-top-media-social-container">
+            <a href="https://www.google.com/search?source=hp&ei=x_EzXNuSJ4SctgWS9rTwAg&q=dfc+tax+center&btnK=Google+Search&oq=dfc+tax+center&gs_l=psy-ab.3..35i39l2j0j0i22i30l3.508.2456..2567...1.0..1.486.2259.0j10j0j1j1....3..0....1..gws-wiz.....0..0i67j0i131j0i20i263j0i22i10i30j0i10.Lu8fdQ-qiuQ"
+              target="_blank">
+              <img src="img/google_black.png" class="footer-top-media-social-container__icon" alt="facebook logo"> </a>
+          </div>
+          <div class="footer-top-media-social-container">
+            <a href="https://www.yelp.com/biz/dfc-tax-and-immigration-center-indio" target="_blank">
+              <img src="img/yelp_black.png" class="footer-top-media-social-container__icon" alt="facebook logo"> </a>
+          </div>
+        </div>
+      </div>-->
+        </div>
+
+        <div class="footer-copyright">
+            <p class="footer-copyright__body">&copy; <span id="copyright"></span> Created By Alexandros
+                Panayi. All rights reserved.</p>
+        </div>
+
+
+
+    </footer>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../assets/js/index.js" async></script>
+</body>
+
+
+</html>

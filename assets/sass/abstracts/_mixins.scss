@@ -1,0 +1,57 @@
+@mixin border($width){
+  &::after{
+    margin-top: 1rem;
+    content: "";
+    display: block;
+    width: $width;
+    height: 2rem;
+    border-radius: 100px;
+    background-color: rgba($color-primary, .75);
+    @media only screen and (max-width: 900px){
+      height:1rem;
+  }
+   
+}
+}
+
+//media query manager
+/*
+0 - 600 : phone
+600 - 900 : tablet portrait
+900 - 1200 : tablet landscape
+1200 - 1800 : desktop normal styles
+1800 + : big screen desktop
+
+*/
+//we use ems because it is the best for media queries, sometimes rem fails in browsers
+//16px = 1em
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      //allows us to pass a block of code into the mixin
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      //900px
+      //allows us to pass a block of code into the mixin
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      //1200px
+      //allows us to pass a block of code into the mixin
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      //1800px
+      //allows us to pass a block of code into the mixin
+      @content;
+    }
+  }
+}

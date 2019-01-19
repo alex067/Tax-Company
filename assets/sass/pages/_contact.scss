@@ -1,0 +1,165 @@
+#invalid-input{  
+    background-color: $color-primary;
+    display: none;
+}
+#neutral-input{
+    background-color: $color-grey-1;
+}
+#valid-input{
+    display: none;
+    background-color: $color-secondary-light;
+
+}
+.input-validator{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+.contact{
+    background-color: $color-grey-light-1;
+    width: 100%;
+    color: $color-black;
+    &-main{
+        padding:20rem 0;
+        width: 80%;
+        margin: 0 auto;
+       
+        display:flex;
+        justify-content:center;
+        @media only screen and (max-width: 1200px){
+            flex-direction: column;
+            align-items:center;
+            
+        }
+        @media only screen and (max-width: 1000px){
+            padding:10rem 0;
+         }
+         @media only screen and (max-width: 350px){
+            width: 100%;
+         }
+        &-header{
+            flex: 0 0 50%;
+            font-weight: 300;
+            padding: 2rem;
+            @media only screen and (max-width: 1200px){
+               width: 70%;
+            }
+            @media only screen and (max-width: 700px){
+                flex: 1 0 90%;
+                width: 90%;
+             }
+            &__title{
+                font-size:3rem;
+                text-align:center;
+                font-weight: 300; 
+                @media only screen and (max-width: 400px){
+                    font-size:3rem !important;
+                 } 
+            }
+            &__subtitle{
+                margin:3rem 0;
+                font-size:1.8rem;
+                
+            }
+            &__info{
+                span{
+                    font-weight: 700;
+                }
+                font-size:1.8rem;
+            }
+        }
+        &-form{    
+            input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+                input[type=number] {
+                    -moz-appearance:textfield;
+                }
+            &__title{
+                margin-bottom:2rem;
+                font-weight: 400;
+                color: $color-primary;
+                line-height: 1.6;
+            }
+            flex: 1 0 50%;
+           
+            padding: 2rem;
+           &-control{
+            padding: 2rem;
+            width: 90%;
+            margin: 0 auto;
+            font-size:1.5rem;
+            font-weight: 300;
+               &--label{
+                   font-weight: 400;
+                 margin-bottom:1rem;
+                 display: block;
+
+               }
+               &--field{
+                   width: 100%;
+                   height:5rem;
+                   margin-bottom:2rem;
+                   display:flex;
+                   border:1px solid rgba($color-black, .65);
+                   overflow:hidden;
+               }
+               &--icon{
+                   width: 12%;
+                   height: 100%;
+                    .fas{
+                        color: $color-white;
+                        font-size:2rem;
+                    }
+               }
+               &--input{
+                   height: 100%;
+                    font-size:1.3rem;
+                    width: 90%;
+                    display: inline-block;
+                    padding: 0 1rem;
+                    transition: .2s all;    
+               }
+               &--error{
+                    color: $color-primary;
+                    font-size:1.4rem;
+                    margin-bottom:1rem;
+               }
+               &--text{
+                    font-size:1.4rem;
+                    width: 100%;
+                    padding: 1.5rem;
+                    margin-bottom:2rem;
+                    transition: .2s all;  
+                    border:1px solid rgba($color-black, .65);
+               }
+               &--submit{
+                   margin-bottom:2rem;
+                    opacity: .85;
+                    display:block;
+               }
+           
+           }
+        }
+    }
+
+}
+
+.thankyou{
+    background-color: $color-grey-light-1;
+    width: 100%;
+    color: $color-black;
+    padding-top:20rem;
+    height: 100vh;
+    &__title{
+        text-align:center;
+        font-size:3rem;
+    }
+    p{
+        font-size:2rem;
+        text-align:center;
+    }
+}
